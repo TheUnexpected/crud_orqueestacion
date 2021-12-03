@@ -1,0 +1,21 @@
+apiVersion: apps/v1 
+kind: Deployment
+metadata:
+  name: crud
+  labels: 
+    tipo: "crud"
+spec:
+  selector: 
+    matchLabels:
+      app: crud
+  replicas: 7 
+  template: 
+    metadata:
+      labels:
+        app: crud
+    spec:
+      containers:
+      - name: personalcrud
+        image: moncadeishon/personalcrud:latest
+        ports: 
+        - containerPort: 80

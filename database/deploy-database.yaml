@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: deploy-db
+  labels:
+    type: deploy-db
+spec:
+  selector:
+    matchLabels:
+      app: deploy-db
+  template:
+    metadata:
+      labels:
+        app: deploy-db
+    spec:
+      containers:
+      - name: personalsql
+        image: moncadeishon/personalsql:latest
+        ports:
+        - containerPort: 3306
+        volumeMounts:
+        - mountPath: /var/lib/mysql
+          name: local-storage
+      volumes:
+       - name: local-storage
+         persistentVolumeClaim:
+            claimName: pvc

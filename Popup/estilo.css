@@ -1,0 +1,35 @@
+ .datosg{
+	width: 40%;
+}
+.datosp{
+    width: 30%;
+}
+.datos3{
+    width: 25%;
+}
+.datos2{
+    width: 36%;
+}
+.gender{
+    width: 10%;
+}
+.radio-inline{
+    width: 15%;
+}
+b{
+    color: #3C7E7B;
+}
+a{
+	text-decoration: none;
+	padding: 10px;
+	background: #3C7E7B;
+	color: #fff;
+	font-size: 15px;
+    border-radius: 10%;
+}
+a:hover{
+    text-decoration: none;
+	background: #fff;
+	color:#3C7E7B;
+    border-color: #3C7E7B;
+}
